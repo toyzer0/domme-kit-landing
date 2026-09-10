@@ -1,0 +1,158 @@
+:root {
+  --bg: #0a0608;
+  --ink: #f6eef2;
+  --mute: #c4a8b4;
+  --pink: #ff4d8d;
+  --pink-dim: #a61d4a;
+  --glow: rgba(255, 77, 141, 0.35);
+  --max: 42rem;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 1.125rem;
+}
+a { color: var(--pink); }
+.whisper {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  opacity: 0.85;
+  text-align: center;
+  margin: 0.75rem auto 2.5rem;
+  max-width: var(--max);
+}
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1rem;
+}
+.section p { margin: 0 0 1.1rem; }
+.section h2 {
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--pink);
+}
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.25rem 3rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+.plate {
+  width: 100%;
+  display: block;
+  margin: 0;
+  background: #11080c;
+}
+.plate img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+.plate.full {
+  max-height: 92vh;
+  overflow: hidden;
+}
+.plate.full img {
+  width: 100%;
+  height: 92vh;
+  object-fit: cover;
+  object-position: center top;
+}
+.money {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: var(--mute);
+  border-left: 2px solid var(--pink-dim);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+.cta {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem 1.25rem;
+  max-width: 20rem;
+  background: var(--pink);
+  color: #14040a;
+  text-decoration: none;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  box-shadow: 0 0 40px var(--glow);
+}
+.cta:hover { filter: brightness(1.05); }
+.unlock {
+  background: #12080d;
+  border: 1px solid #3a1a28;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+.unlock h3 { margin: 0 0 0.5rem; color: var(--pink); font-size: 1rem; }
+.unlock p { color: var(--mute); margin: 0 0 0.75rem; }
+.unlock input, .unlock button {
+  width: 100%;
+  margin: 0.35rem 0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4a2434;
+  background: #1a0c12;
+  color: var(--ink);
+}
+.unlock button {
+  background: var(--pink-dim);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.close {
+  text-align: center;
+  padding: 4rem 1.25rem 6rem;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.close .big {
+  font-size: 1.6rem;
+  margin: 0.4rem 0;
+}
+.sticky-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(10,6,8,0.72);
+  border-bottom: 1px solid #2a121c;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-align: center;
+  padding: 0.55rem;
+}
+@media (min-width: 900px) {
+  .plate.full img { max-width: 56rem; margin: 0 auto; height: 85vh; }
+}
