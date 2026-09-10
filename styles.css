@@ -156,3 +156,16 @@ a { color: var(--pink); }
 @media (min-width: 900px) {
   .plate.full img { max-width: 56rem; margin: 0 auto; height: 85vh; }
 }
+
+/* Hypno augment — whisper holds attention */
+.whisper {
+  text-shadow: 0 0 24px var(--glow);
+  animation: whisperIn 1.2s ease both;
+}
+@keyframes whisperIn {
+  from { opacity: 0; letter-spacing: 0.22em; }
+  to { opacity: 0.85; letter-spacing: 0.12em; }
+}
+.plate.full img {
+  filter: saturate(1.05) contrast(1.04);
+}
